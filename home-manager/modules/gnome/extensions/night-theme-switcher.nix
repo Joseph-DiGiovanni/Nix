@@ -1,0 +1,24 @@
+{ pkgs, ... }:
+
+{
+  dconf.settings = {
+    "org/gnome/shell".enabled-extensions = [ "nightthemeswitcher@romainvigier.fr" ];
+
+    "org/gnome/shell/extensions/nightthemeswitcher/commands" = {
+      enabled = true;
+      sunrise = "gsettings set org.gnome.desktop.interface gtk-theme Adwaita";
+      sunset = "gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark";
+    };
+
+    "org/gnome/shell/extensions/nightthemeswitcher/time" = {
+      manual-schedule = true;
+      sunrise = 8.0;
+      sunset = 20.0;
+    };
+  };
+
+  home.packages = with pkgs; [
+    gnome.gnome-themes-extra # For Adwaita-dark theme
+    gnomeExtensions.night-theme-switcher
+  ];
+}
