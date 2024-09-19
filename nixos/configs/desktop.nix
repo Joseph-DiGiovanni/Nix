@@ -2,6 +2,7 @@
 
 {
   imports = with custom-modules.nixos.software; [
+    appimage
     auto-wlan
     flatpak
     gnome
