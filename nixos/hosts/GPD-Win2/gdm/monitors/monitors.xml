@@ -1,0 +1,23 @@
+<monitors version="2">
+  <configuration>
+    <logicalmonitor>
+      <x>0</x>
+      <y>0</y>
+      <scale>1</scale>
+      <primary>yes</primary>
+      <monitor>
+        <monitorspec>
+          <connector>eDP-1</connector>
+          <vendor>LTM</vendor>
+          <product>0x3937</product>
+          <serial>0x0000025f</serial>
+        </monitorspec>
+        <mode>
+          <width>1280</width>
+          <height>720</height>
+          <rate>59.999</rate>
+        </mode>
+      </monitor>
+    </logicalmonitor>
+  </configuration>
+</monitors>
