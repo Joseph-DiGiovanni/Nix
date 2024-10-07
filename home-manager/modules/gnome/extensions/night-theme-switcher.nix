@@ -11,9 +11,7 @@
     };
 
     "org/gnome/shell/extensions/nightthemeswitcher/time" = {
-      manual-schedule = true;
-      sunrise = 8.0;
-      sunset = 20.0;
+      manual-schedule = false;
     };
   };
 
