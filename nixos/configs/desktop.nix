@@ -5,6 +5,7 @@
     appimage
     auto-wlan
     flatpak
+    geoclue2
     gnome
     localsend
     pipewire
@@ -38,6 +39,8 @@
   };
 
   services = {
+    localtimed.enable = true;
+
     avahi = {
       enable = true;
       nssmdns4 = true;
@@ -48,6 +51,5 @@
     printing.enable = true;
   };
 
-  time.timeZone = "America/New_York";
   users.mutableUsers = false;
 }
