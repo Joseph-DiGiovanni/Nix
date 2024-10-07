@@ -16,7 +16,7 @@
       picture-uri-dark = "file:///home/${config.home.username}/Pictures/Wallpapers/Dark.jpg";
     };
 
-    "org/gnome/desktop/datetime".automatic-timezone = false; # TODO: Auto timezone not working since mozilla location service shutdown
+    "org/gnome/desktop/datetime".automatic-timezone = false; # TODO: Auto timezone not working since mozilla location service shutdown;
 
     "org/gnome/desktop/interface" = {
       clock-format = "12h";
@@ -37,9 +37,7 @@
 
     "org/gnome/settings-daemon/plugins/color" = {
       night-light-enabled = true;
-      night-light-schedule-automatic = false;
-      night-light-schedule-from = 22.0;
-      night-light-schedule-to = 6.0;
+      night-light-schedule-automatic = true;
       night-light-temperature = lib.hm.gvariant.mkUint32 4500;
     };
 
