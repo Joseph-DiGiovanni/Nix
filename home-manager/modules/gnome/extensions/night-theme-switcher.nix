@@ -16,7 +16,7 @@
   };
 
   home.packages = with pkgs; [
-    gnome.gnome-themes-extra # For Adwaita-dark theme
+    gnome-themes-extra # For Adwaita-dark theme
     gnomeExtensions.night-theme-switcher
   ];
 }

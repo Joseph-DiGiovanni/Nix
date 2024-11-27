@@ -31,7 +31,7 @@
       edge-tiling = true;
       experimental-features = [
         "scale-monitor-framebuffer"
-        "variable-refresh-rate" # TODO: May not be needed in gnome 47
+        "variable-refresh-rate" # TODO: May not be needed in gnome 48
       ];
     };
 

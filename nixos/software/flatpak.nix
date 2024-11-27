@@ -3,7 +3,7 @@
 {
   config = {
     environment.systemPackages = lib.mkIf config.services.xserver.desktopManager.gnome.enable [
-      pkgs.gnome.gnome-software
+      pkgs.gnome-software
     ];
 
     services.flatpak.enable = true;

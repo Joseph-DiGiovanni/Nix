@@ -4,7 +4,6 @@
   imports = with custom-modules.nixos.software; [
     appimage
     auto-wlan
-    bluetooth
     flatpak
     geoclue2
     gnome

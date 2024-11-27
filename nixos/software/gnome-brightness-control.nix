@@ -23,14 +23,14 @@ in
           Service = {
             ExecStart = pkgs.writeShellScript "ddcutil-auto-brightness-gnome" ''
               ${pkgs.glib}/bin/gsettings monitor org.gnome.desktop.interface color-scheme | while read -r line; do
-                ${pkgs.gnome.gnome-shell}/bin/gnome-extensions disable ${UUID} # Reload the extension to detect the brightness change
+                ${pkgs.gnome-shell}/bin/gnome-extensions disable ${UUID} # Reload the extension to detect the brightness change
                 if [[ "$line" == *"prefer-dark"* ]]; then
                   ${pkgs.ddcutil}/bin/ddcutil setvcp 10 ${toString darkModeBrightness}
                 else
                   ${pkgs.ddcutil}/bin/ddcutil setvcp 10 ${toString lightModeBrightness}
                 fi
                 # Reload the extension to apply the brightness change
-                ${pkgs.gnome.gnome-shell}/bin/gnome-extensions enable ${UUID}
+                ${pkgs.gnome-shell}/bin/gnome-extensions enable ${UUID}
               done
             '';
             Restart = "always";
