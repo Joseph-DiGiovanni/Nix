@@ -5,19 +5,18 @@
 
   environment = {
     gnome.excludePackages = with pkgs; [
-      gnome-tour
-      gnome-connections
-    ] ++ (with gnome; [
       epiphany
       evince
       geary
+      gnome-connections
       gnome-contacts
       gnome-maps
       gnome-music
+      gnome-tour
       simple-scan
       totem
       yelp
-    ]);
+    ];
 
     systemPackages = with pkgs; [
       celluloid
@@ -40,7 +39,7 @@
 
           "org/gnome/mutter".experimental-features = [
             "scale-monitor-framebuffer"
-            "variable-refresh-rate" # TODO: May not be needed in gnome 47
+            "variable-refresh-rate" # TODO: May not be needed in gnome 48
           ];
 
           "org/gnome/settings-daemon/plugins/color" = {
