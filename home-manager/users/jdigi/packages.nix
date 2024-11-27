@@ -17,7 +17,7 @@
     obs-studio
     onlyoffice-bin
     openspades
-    transmission-gtk
+    transmission_4-gtk
     youtube-music
     via
   ];

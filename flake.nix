@@ -9,7 +9,7 @@
 
     firefox-gnome-theme = {
       flake = false;
-      url = "github:rafaelmardojai/firefox-gnome-theme/v132";
+      url = "github:rafaelmardojai/firefox-gnome-theme/v133";
     };
 
     haumea = {
@@ -19,7 +19,7 @@
 
     home-manager = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/release-24.11";
     };
 
     lanzaboote = {
@@ -32,7 +32,7 @@
       url = "github:nix-community/nix-vscode-extensions";
     };
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     sops-nix = {

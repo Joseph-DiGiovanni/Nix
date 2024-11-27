@@ -18,11 +18,9 @@ let
     };
 
     gpu-screen-recorder-gtk = final.unstable.gpu-screen-recorder-gtk;
-    icoextract = final.unstable.icoextract; # TODO: remove in next release
     proton-ge-bin = final.unstable.proton-ge-bin;
     sidequest = final.unstable.sidequest;
     unstable = import inputs.nixpkgs-unstable { inherit (final) config system; };
-    vscode = final.unstable.vscode;
   };
 in
 import nixpkgs {
