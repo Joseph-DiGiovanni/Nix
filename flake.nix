@@ -4,12 +4,12 @@
   inputs = {
     disko = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/disko";
+      url = "github:nix-community/disko/latest";
     };
 
     firefox-gnome-theme = {
       flake = false;
-      url = "github:rafaelmardojai/firefox-gnome-theme";
+      url = "github:rafaelmardojai/firefox-gnome-theme/v132";
     };
 
     haumea = {
@@ -24,7 +24,7 @@
 
     lanzaboote = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/lanzaboote";
+      url = "github:nix-community/lanzaboote/v0.4.1";
     };
 
     nix-vscode-extensions = {
