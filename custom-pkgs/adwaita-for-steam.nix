@@ -7,13 +7,13 @@ let
 in
 stdenvNoCC.mkDerivation rec {
   name = "adwaita-for-steam";
-  version = "2.6";
+  version = "3.1";
 
   src = fetchFromGitHub {
     owner = "tkashkin";
     repo = "Adwaita-for-Steam";
     rev = "v${version}";
-    hash = "sha256-4shh2BfzH4xk+vSTcEOKIkVg5hILKcOKKgpyA49JPWY=";
+    hash = "sha256-V2Ps4jP7UeoXTY1q7gLbWVQW9WwUzMM6RPYUvNDAJ0I=";
   };
 
   preferLocalBuild = true;
