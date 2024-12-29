@@ -5,6 +5,7 @@
     ./file-systems.nix
     ./gdm/monitors
     ./home-manager
+    configs."3d-printing"
     configs.desktop
     configs.desktop-extras
     configs.gaming
