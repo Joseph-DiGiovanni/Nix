@@ -16,6 +16,7 @@
     localsend
     obs-studio
     onlyoffice-bin
+    openmw
     openspades
     transmission_4-gtk
     youtube-music
