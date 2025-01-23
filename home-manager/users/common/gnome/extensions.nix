@@ -5,6 +5,7 @@
     alphabetical-app-grid
     bluetooth-battery-meter
     bottom-overview
+    caffeine
     #compiz-windows-effect # Conflicts with outline theme
     maximize-to-empty-workspace
     gnome-rounded-corners
