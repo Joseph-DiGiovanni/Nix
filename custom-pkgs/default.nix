@@ -3,12 +3,12 @@
 let
   customPkgs = final: prev: with nixpkgs.legacyPackages.${system}; {
     adwaita-for-steam = callPackage ./adwaita-for-steam.nix { };
-    alvr = callPackage ./alvr { };
     mkvextract-gtk = callPackage ./mkvextract-gtk.nix { };
     plymouth-theme-neat = callPackage ./plymouth-theme-neat.nix { };
   };
 
   unstableOverlay = final: prev: {
+    alvr = final.unstable.alvr;
     decibels = final.unstable.decibels; # TODO: remove in next release
 
     gnomeExtensions = prev.gnomeExtensions // {
