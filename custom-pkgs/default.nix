@@ -9,14 +9,6 @@ let
 
   unstableOverlay = final: prev: {
     alvr = final.unstable.alvr;
-    decibels = final.unstable.decibels; # TODO: remove in next release
-
-    gnomeExtensions = prev.gnomeExtensions // {
-      maximize-to-empty-workspace = final.unstable.gnomeExtensions.maximize-to-empty-workspace; # TODO: Remove when version 14 is in stable
-      hide-top-bar = final.unstable.gnomeExtensions.hide-top-bar; # TODO: Remove when version 117 is in stable
-      rounded-window-corners-reborn = final.unstable.gnomeExtensions.rounded-window-corners-reborn; # TODO: Remove in next release
-    };
-
     gpu-screen-recorder-gtk = final.unstable.gpu-screen-recorder-gtk;
     proton-ge-bin = final.unstable.proton-ge-bin;
     sidequest = final.unstable.sidequest;
