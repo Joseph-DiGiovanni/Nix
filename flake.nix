@@ -41,7 +41,7 @@
     };
   };
 
-  outputs = inputs @ { disko, haumea, home-manager, nixpkgs, self, sops-nix, ... }:
+  outputs = inputs @ { haumea, nixpkgs, self, ... }:
     let
       loadDir = path: haumea.lib.load {
         loader = haumea.lib.loaders.path;
@@ -54,6 +54,6 @@
       };
     in
     {
-      nixosConfigurations = import ./nixos.nix { inherit custom-modules disko home-manager inputs nixpkgs sops-nix; };
+      nixosConfigurations = import ./nixos.nix { inherit custom-modules inputs nixpkgs; };
     };
 }

@@ -1,4 +1,4 @@
-{ custom-modules, disko, home-manager, inputs, nixpkgs, sops-nix, ... }:
+{ custom-modules, inputs, nixpkgs, ... }:
 
 with nixpkgs.lib;
 
@@ -8,9 +8,9 @@ let
       rec {
         modules = [
           custom-modules.nixos.hosts."${hostName}".default
-          disko.nixosModules.disko
-          home-manager.nixosModules.home-manager
-          sops-nix.nixosModules.sops
+          inputs.disko.nixosModules.disko
+          inputs.sops-nix.nixosModules.sops
+          inputs.home-manager.nixosModules.home-manager
           {
             home-manager = {
               backupFileExtension = "hmbackup";
