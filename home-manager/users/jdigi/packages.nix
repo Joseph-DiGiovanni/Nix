@@ -11,7 +11,6 @@
     foliate
     gimp
     github-desktop
-    gpu-screen-recorder-gtk
     handbrake
     localsend
     obs-studio

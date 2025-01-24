@@ -11,7 +11,6 @@
 
     packages = with pkgs; [
       discord
-      gpu-screen-recorder-gtk
       youtube-music
     ];
   };

@@ -9,7 +9,6 @@ let
 
   unstableOverlay = final: prev: {
     alvr = final.unstable.alvr;
-    gpu-screen-recorder-gtk = final.unstable.gpu-screen-recorder-gtk;
     proton-ge-bin = final.unstable.proton-ge-bin;
     sidequest = final.unstable.sidequest;
     unstable = import inputs.nixpkgs-unstable { inherit (final) config system; };
