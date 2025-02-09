@@ -11,7 +11,7 @@
 
     firefox-gnome-theme = {
       flake = false;
-      url = "github:rafaelmardojai/firefox-gnome-theme/v134";
+      url = "github:rafaelmardojai/firefox-gnome-theme/v135";
     };
 
     haumea = {
@@ -26,7 +26,7 @@
 
     lanzaboote = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/lanzaboote/v0.4.1";
+      url = "github:nix-community/lanzaboote/v0.4.2";
     };
 
     nix-vscode-extensions = {
