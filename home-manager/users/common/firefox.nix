@@ -15,26 +15,26 @@ in
       DisablePocket = true;
       DisableTelemetry = true;
       DisplayBookmarksToolbar = "never";
-      
+
       EnableTrackingProtection = {
         Cryptomining = true;
         Fingerprinting = true;
         Locked = true;
         Value = true;
       };
-      
+
       ExtensionSettings."uBlock0@raymondhill.net" = {
         default_area = "menupanel";
         install_url = generateLatestSourceURL "ublock-origin";
         installation_mode = "force_installed";
       };
-      
+
       Homepage.StartPage = "previous-session";
       NoDefaultBookmarks = true;
       OfferToSaveLogins = false;
       OverrideFirstRunPage = "";
       OverridePostUpdatePage = "";
-      
+
       Preferences = {
         "browser.newtabpage.activity-stream.showSponsored" = false;
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
@@ -47,10 +47,10 @@ in
     profiles.${config.home.username} = {
       id = 0;
       isDefault = true;
-      
+
       search = {
         default = "PrivateSearch";
-        
+
         engines = {
           "NixOS Options" = {
             urls = [{
@@ -88,7 +88,7 @@ in
             definedAliases = [ "@privatesearch" ];
           };
         };
-        
+
         force = true; # Required to prevent search engine symlink being overwritten. See https://github.com/nix-community/home-manager/issues/3698
       };
     };

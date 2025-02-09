@@ -28,9 +28,9 @@ in
               "/home/.snapshots" = { };
 
               "/persist" = {
-                  mountpoint = "/persist";
-                  mountOptions = btrfOptions ++ ssdOptions;
-                };
+                mountpoint = "/persist";
+                mountOptions = btrfOptions ++ ssdOptions;
+              };
             };
           };
         };
