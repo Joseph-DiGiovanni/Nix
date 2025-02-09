@@ -52,6 +52,7 @@
   };
 
   services = {
+    displayManager.autoLogin.enable = lib.mkIf (config.boot.initrd.luks.devices != { }) true;
     fwupd.enable = lib.mkDefault true;
     gnome.gnome-keyring.enable = lib.mkDefault true;
 
