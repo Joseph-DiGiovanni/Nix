@@ -19,8 +19,9 @@
 
     userSettings = {
       "editor.formatOnSave" = true;
-      "window.autoDetectColorScheme" = true;
       "git.openRepositoryInParentFolders" = "always";
+      "window.autoDetectColorScheme" = true;
+      "window.titleBarStyle" = "custom";
     };
   };
 }
