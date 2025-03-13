@@ -9,11 +9,11 @@
     gnome
     localsend
     nix-index
+    nm-online-fix
     pipewire
     pipewire-virtual-surround
     plymouth
     systemd-boot
-    systemd-wait-online
   ];
 
   hardware.enableRedistributableFirmware = true;
