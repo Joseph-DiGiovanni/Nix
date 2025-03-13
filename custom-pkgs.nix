@@ -4,6 +4,7 @@ let
 
   unstableOverlay = final: prev: {
     alvr = final.unstable.alvr;
+    godot_4 = final.unstable.godot;
     proton-ge-bin = final.unstable.proton-ge-bin;
     sidequest = final.unstable.sidequest;
     unstable = import inputs.nixpkgs-unstable { inherit (final) config system; };
