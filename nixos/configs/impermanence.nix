@@ -1,20 +1,18 @@
 { config, lib, pkgs, ... }:
 
-let
-  tmpPath = "/nix/tmp";
-in
 {
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
+      "/etc/NetworkManager/system-connections"
+      "/etc/secureboot"
+      "/tmp" # Prevent tmp from filling while using tmpfs
       "/var/log"
       "/var/lib/bluetooth"
       "/var/lib/flatpak"
       "/var/lib/fprint"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
-      "/etc/NetworkManager/system-connections"
-      "/etc/secureboot"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
     ];
     files = [
@@ -34,8 +32,6 @@ in
 
   systemd = {
     services = {
-      nix-daemon.environment.TMPDIR = tmpPath; # Move tmp to nix store to avoid filling the tmpfs
-
       timezone-persistence = lib.mkIf (config.time.timeZone == null) {
         # This is required since symlinks cannot be persisted and declaring the timezone makes it immutable
         # See https://github.com/nix-community/impermanence/issues/153
@@ -73,6 +69,6 @@ in
       };
     };
 
-    tmpfiles.rules = [ "D! ${tmpPath} 1777 root root" ]; # Make sure the new tmp directory is created and cleared on boot
+    tmpfiles.rules = [ "D! /persist/tmp 1777 root root" ]; # Make sure the new tmp directory is created and cleared on boot
   };
 }
