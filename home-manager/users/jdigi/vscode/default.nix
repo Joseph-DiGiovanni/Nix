@@ -13,7 +13,8 @@
       "editor.formatOnSave" = true;
       "git.openRepositoryInParentFolders" = "always";
       "window.autoDetectColorScheme" = true;
-      "window.titleBarStyle" = "custom";
+      "window.titleBarStyle" = "native";
+      "window.menuBarVisibility" = "toggle";
     };
   };
 }
